@@ -209,7 +209,7 @@ Solicitar Reserva
 </div>
 
 <script>
-function enviarWhatsApp() {
+function enviarWhatsApp()
 
   let nombre = document.getElementById("nombre").value;
   let dni = document.getElementById("dni").value;
@@ -218,16 +218,16 @@ function enviarWhatsApp() {
 
   let mensaje =
     "SOLICITUD DE RESERVA%0A%0A" +
-    "Nombre: " + nombre + "%0A" +
-    "DNI: " + dni + "%0A" +
-    "Teléfono: " + telefono + "%0A" +
-    "Montería: " + monteria;
+SOLICITUD DE RESERVA
+Nombre:
+DNI:
+Teléfono:
+Montería:
+ window.open(
+"https://wa.me/34650849660?text=" + mensaje,
+"_blank"
+);
 
-  window.open(
-    "https://wa.me/34650849660?text=" + mensaje,
-    "_blank"
-  );
-}
 </script>
 
 
