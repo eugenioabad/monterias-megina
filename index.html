@@ -170,27 +170,65 @@ de ciervos, gamos y jabalíes.
 <a class="boton" href="https://wa.me/34650849660">Reservar por WhatsApp</a>
 <div class="tarjeta">
 
+<div class="tarjeta">
+
 <h2>Reserva de Puestos</h2>
 
-<p><strong>Nombre y Apellidos:</strong></p>
+<form id="reservaForm">
 
-<p><strong>DNI:</strong></p>
+<label for="nombre"><strong>Nombre y Apellidos:</strong></label><br>
+<input type="text" id="nombre" name="nombre" required><br><br>
 
-<p><strong>Teléfono:</strong></p>
+<label for="dni"><strong>DNI:</strong></label><br>
+<input type="text" id="dni" name="dni" required><br><br>
 
-<p><strong>Montería seleccionada:</strong></p>
+<label for="telefono"><strong>Teléfono:</strong></label><br>
+<input type="tel" id="telefono" name="telefono" required><br><br>
 
-<ul>
-<li>Cerroalto -24 - Octubre 2026</li>
-<li>Montenegro - 28 Noviembre 2026</li>
-<li>Dehesillas - 16 Enero 2027</li>
-</ul>
+<label for="monteria"><strong>Montería seleccionada:</strong></label><br>
+<select id="monteria" name="monteria">
+  <option value="24 Octubre 2026 - Cerroalto">
+    24 Octubre 2026 - Cerroalto
+  </option>
+  <option value="28 Noviembre 2026 - Montenegro">
+    28 Noviembre 2026 - Montenegro
+  </option>
+  <option value="16 Enero 2027 - Dehesillas">
+    16 Enero 2027 - Dehesillas
+  </option>
+</select>
 
-<a class="boton" href="https://wa.me/34650849660">
+<br><br>
+
+<button type="button" class="boton" onclick="enviarWhatsApp()">
 Solicitar Reserva
-</a>
+</button>
 
-</div>    
+</form>
+
+</div>
+
+<script>
+function enviarWhatsApp() {
+
+  let nombre = document.getElementById("nombre").value;
+  let dni = document.getElementById("dni").value;
+  let telefono = document.getElementById("telefono").value;
+  let monteria = document.getElementById("monteria").value;
+
+  let mensaje =
+    "SOLICITUD DE RESERVA%0A%0A" +
+    "Nombre: " + nombre + "%0A" +
+    "DNI: " + dni + "%0A" +
+    "Teléfono: " + telefono + "%0A" +
+    "Montería: " + monteria;
+
+  window.open(
+    "https://wa.me/34650849660?text=" + mensaje,
+    "_blank"
+  );
+}
+</script>
 
 
 
