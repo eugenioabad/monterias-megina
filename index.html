@@ -218,16 +218,15 @@ function enviarWhatsApp()
 
   let mensaje =
     "SOLICITUD DE RESERVA%0A%0A" +
-SOLICITUD DE RESERVA
-Nombre:
-DNI:
-Teléfono:
-Montería:
+"Nombre: " + nombre + "%0A" +
+"DNI: " + dni + "%0A" +
+"Teléfono: " + telefono + "%0A" +
+"Montería: " + monteria;
  window.open(
+
 "https://wa.me/34650849660?text=" + mensaje,
 "_blank"
 );
-
 </script>
 
 
